@@ -1,0 +1,62 @@
+{
+  "LF1":  { "label": "Das Unternehmen und sein Umfeld",                "topics": {} },
+  "LF2":  { "label": "Arbeitsplätze nach Kundenwunsch ausstatten",     "topics": {} },
+  "LF3":  { "label": "Clients in Netzwerke einbinden",                "topics": {} },
+  "LF4":  { "label": "Schutzbedarfsanalyse im eigenen Arbeitsbereich","topics": {} },
+  "LF5":  { "label": "Software zur Verwaltung von Netzwerken",        "topics": {} },
+  "LF6":  { "label": "Serviceanfragen bearbeiten",                    "topics": {} },
+  "LF7":  { "label": "Cyber-physische Systeme ergänzen",              "topics": {} },
+  "LF8":  { "label": "Netzwerke und Dienste bereitstellen",           "topics": {} },
+  "LF9":  { "label": "Netzwerke und Dienste absichern",               "topics": {} },
+
+  "LF10": {
+    "label": "Servergestützte Netzwerke administrieren",
+    "topics": {
+      "FTP": [
+        {
+          "title": "Was ist FTP?",
+          "text": "FTP (File Transfer Protocol) ist ein Netzwerkprotokoll zur Übertragung von Dateien zwischen einem Client und einem Server.\n\nWichtigste Eigenschaften:\n– Anwendungsschicht (OSI-Schicht 7)\n– Nutzt TCP als Transportprotokoll\n– Zwei getrennte Verbindungen:\n   Steuerkanal (Port 21) und Datenkanal (Port 20 oder dynamisch)\n– Klartextübertragung – kein Schutz vor Mitlesen\n   (Sichere Alternative: SFTP oder FTPS)",
+          "image": null,
+          "image_caption": null,
+          "code": "Client  ──Port 21──►  Server   (Steuerkanal: Befehle)\nClient  ◄─Port 20──   Server   (Datenkanal:  Dateien)",
+          "link": "https://www.elektronik-kompendium.de/sites/net/0902241.htm"
+        },
+        {
+          "title": "FTP-Server in Packet Tracer einrichten",
+          "text": "Einen FTP-Server in Cisco Packet Tracer aktivieren und konfigurieren:\n\n1. Server-Gerät anklicken → Reiter 'Services'\n2. Dienst 'FTP' auswählen → ON aktivieren\n3. Benutzer anlegen: Username, Password, Berechtigungen\n4. IP-Adresse des Servers notieren\n\nTest vom Client im gleichen Netz → Command Prompt → ftp <IP>",
+          "image": null,
+          "image_caption": null,
+          "code": "Services → FTP → ON\n\nUser:        admin\nPassword:    cisco\nPermissions: Read  Write  List",
+          "link": null
+        },
+        {
+          "title": "FTP-Befehle im Command Prompt",
+          "text": "FTP-Verbindung von einem PC herstellen und Dateien übertragen:\n\n1. PC anklicken → Desktop → Command Prompt\n2. Verbindung aufbauen mit: ftp <IP-Adresse>\n3. Login mit Username und Password\n4. Befehle eingeben",
+          "image": null,
+          "image_caption": null,
+          "code": "C:\\> ftp 192.168.1.10\nUsername: admin\nPassword: cisco\n\nftp> dir               (Verzeichnis anzeigen)\nftp> get datei.txt     (Datei herunterladen)\nftp> put bericht.txt   (Datei hochladen)\nftp> quit              (Verbindung beenden)",
+          "link": null
+        },
+        {
+          "title": "Zugriff aus anderem Netz – Routing prüfen",
+          "text": "Soll ein Client aus einem anderen Netz auf den FTP-Server zugreifen, muss zuerst das Routing stimmen:\n\n1. Router zwischen beiden Netzen konfigurieren\n2. Default-Gateway auf beiden Seiten korrekt setzen\n3. Erreichbarkeit mit ping testen\n\nErst wenn ping funktioniert → weiter mit der ACL-Konfiguration.",
+          "image": null,
+          "image_caption": null,
+          "code": "Netz A: 192.168.1.0/24  (FTP-Server: .10)\nNetz B: 192.168.2.0/24  (Client:     .20)\n\nRouter Gi0/0: 192.168.1.1   (Gateway für Netz A)\nRouter Gi0/1: 192.168.2.1   (Gateway für Netz B)\n\nTest vom Client:\nC:\\> ping 192.168.1.10",
+          "link": null
+        },
+        {
+          "title": "ACL: FTP-Zugriff aus anderem Netz erlauben",
+          "text": "Eine Extended ACL erlaubt gezielt FTP-Verkehr (TCP Port 20 + 21) von Netz B zum FTP-Server. Alle anderen Verbindungen werden gesperrt.\n\nDie ACL wird am Router-Interface von Netz B eingehend (in) angewendet.",
+          "image": null,
+          "image_caption": null,
+          "code": "Router(config)# ip access-list extended FTP-ALLOW\nRouter(config-ext-nacl)# permit tcp 192.168.2.0 0.0.0.255 host 192.168.1.10 eq 21\nRouter(config-ext-nacl)# permit tcp 192.168.2.0 0.0.0.255 host 192.168.1.10 eq 20\nRouter(config-ext-nacl)# deny   ip any any\nRouter(config-ext-nacl)# exit\n\nRouter(config)# interface gi0/1\nRouter(config-if)# ip access-group FTP-ALLOW in",
+          "link": null
+        }
+      ]
+    }
+  },
+
+  "LF11": { "label": "Unternehmensnetzwerke und Dienste",   "topics": {} },
+  "LF12": { "label": "Kundenspezifische Systemintegration", "topics": {} }
+}
