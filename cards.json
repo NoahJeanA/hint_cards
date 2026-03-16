@@ -1,16 +1,16 @@
 {
-  "LF1":  { "label": "Das Unternehmen und sein Umfeld",                "topics": {} },
+  "LF1":  { "label": "Das Unternehmen und die eigene Rolle im Betrieb beschreiben",                "topics": {} },
   "LF2":  { "label": "Arbeitsplätze nach Kundenwunsch ausstatten",     "topics": {} },
   "LF3":  { "label": "Clients in Netzwerke einbinden",                "topics": {} },
   "LF4":  { "label": "Schutzbedarfsanalyse im eigenen Arbeitsbereich","topics": {} },
-  "LF5":  { "label": "Software zur Verwaltung von Netzwerken",        "topics": {} },
+  "LF5":  { "label": "Software zur Verwaltung von Daten anpassen",        "topics": {} },
   "LF6":  { "label": "Serviceanfragen bearbeiten",                    "topics": {} },
   "LF7":  { "label": "Cyber-physische Systeme ergänzen",              "topics": {} },
-  "LF8":  { "label": "Netzwerke und Dienste bereitstellen",           "topics": {} },
-  "LF9":  { "label": "Netzwerke und Dienste absichern",               "topics": {} },
+  "LF8":  { "label": "Daten systemübergreifend bereitstellen",           "topics": {} },
+  "LF9":  { "label": "Netzwerke und Dienste bereitstellen",               "topics": {} },
 
   "LF10": {
-    "label": "Servergestützte Netzwerke administrieren",
+    "label": "Serverdienste bereitstellen und Administrationsaufgaben automatisieren",
     "topics": {
       "FTP": [
         {
@@ -57,6 +57,6 @@
     }
   },
 
-  "LF11": { "label": "Unternehmensnetzwerke und Dienste",   "topics": {} },
-  "LF12": { "label": "Kundenspezifische Systemintegration", "topics": {} }
+  "LF11": { "label": "Betrieb und Sicherheit vernetzter Systeme gewährleisten",   "topics": {} },
+  "LF12": { "label": "Kundenspezifische Systemintegration durchführen", "topics": {} }
 }
