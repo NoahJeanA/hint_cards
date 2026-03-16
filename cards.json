@@ -53,7 +53,7 @@
           "code": "Router(config)# ip nat inside source static tcp 10.10.10.253 20 13.13.13.2 20\nRouter(config)# ip nat inside source static tcp 10.10.10.253 21 13.13.13.2 21",
           "link": null
         }
-      ]
+      ],
       "DNS": [
         {
           "title": "Was ist FTP?",
