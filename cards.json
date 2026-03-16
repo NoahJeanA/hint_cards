@@ -39,18 +39,18 @@
         },
         {
           "title": "Zugriff aus anderem Netz – Routing prüfen",
-          "text": "Soll ein Client aus einem anderen Netz auf den FTP-Server zugreifen, muss zuerst das Routing stimmen:\n\n1. Router zwischen beiden Netzen konfigurieren\n2. Default-Gateway auf beiden Seiten korrekt setzen\n3. Erreichbarkeit mit ping testen\n\nErst wenn ping funktioniert → weiter mit der ACL-Konfiguration.",
+          "text": "Soll ein Client aus einem anderen Netz auf den FTP-Server zugreifen, muss zuerst das Routing stimmen:\n\n1. Ping von einem Client aus Quellnetz an die öffentliche IP des Zielnetz testen\n2. Default-Gateway auf beiden Seiten korrekt setzen\n3. Erreichbarkeit mit ping testen\n\nErst wenn ping funktioniert → weiter mit der ACL-Konfiguration.",
           "image": null,
           "image_caption": null,
-          "code": "Netz A: 192.168.1.0/24  (FTP-Server: .10)\nNetz B: 192.168.2.0/24  (Client:     .20)\n\nRouter Gi0/0: 192.168.1.1   (Gateway für Netz A)\nRouter Gi0/1: 192.168.2.1   (Gateway für Netz B)\n\nTest vom Client:\nC:\\> ping 192.168.1.10",
+          "code": "ping 13.13.13.2",
           "link": null
         },
         {
           "title": "ACL: FTP-Zugriff aus anderem Netz erlauben",
-          "text": "Eine Extended ACL erlaubt gezielt FTP-Verkehr (TCP Port 20 + 21) von Netz B zum FTP-Server. Alle anderen Verbindungen werden gesperrt.\n\nDie ACL wird am Router-Interface von Netz B eingehend (in) angewendet.",
+          "text": "Eine ACL erlaubt gezielt FTP-Verkehr (TCP Port 20 + 21) zum FTP-Server. Alle anderen Verbindungen bleiben gesperrt.\n\nDie ACL wird am Router konfiguriert",
           "image": null,
           "image_caption": null,
-          "code": "Router(config)# ip access-list extended FTP-ALLOW\nRouter(config-ext-nacl)# permit tcp 192.168.2.0 0.0.0.255 host 192.168.1.10 eq 21\nRouter(config-ext-nacl)# permit tcp 192.168.2.0 0.0.0.255 host 192.168.1.10 eq 20\nRouter(config-ext-nacl)# deny   ip any any\nRouter(config-ext-nacl)# exit\n\nRouter(config)# interface gi0/1\nRouter(config-if)# ip access-group FTP-ALLOW in",
+          "code": "Router(config)# ip nat inside source static tcp 10.10.10.253 20 13.13.13.2 20\nip nat inside source static tcp 10.10.10.253 21 13.13.13.2 21\nRouter(config-ext-nacl)# permit tcp 192.168.2.0 0.0.0.255 host 192.168.1.10 eq 20",
           "link": null
         }
       ]
