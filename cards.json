@@ -39,7 +39,7 @@
         },
         {
           "title": "Zugriff aus anderem Netz – Routing prüfen",
-          "text": "Soll ein Client aus einem anderen Netz auf den FTP-Server zugreifen, muss zuerst das Routing stimmen:\n\n1. Ping von einem Client aus Quellnetz an die öffentliche IP des Zielnetz testen\n2. Default-Gateway auf beiden Seiten korrekt setzen\n3. Erreichbarkeit mit ping testen\n\nErst wenn ping funktioniert → weiter mit der ACL-Konfiguration.",
+          "text": "Soll ein Client aus einem anderen Netz auf den FTP-Server zugreifen, muss zuerst das Routing stimmen:\n\n1. Erreichbarkeit mit ping testen\n\nErst wenn ping funktioniert → weiter mit der ACL-Konfiguration.",
           "image": null,
           "image_caption": null,
           "code": "ping 13.13.13.2",
@@ -50,7 +50,7 @@
           "text": "Eine ACL erlaubt gezielt FTP-Verkehr (TCP Port 20 + 21) zum FTP-Server. Alle anderen Verbindungen bleiben gesperrt.\n\nDie ACL wird am Router konfiguriert",
           "image": null,
           "image_caption": null,
-          "code": "Router(config)# ip nat inside source static tcp 10.10.10.253 20 13.13.13.2 20\nip nat inside source static tcp 10.10.10.253 21 13.13.13.2 21\nRouter(config-ext-nacl)# permit tcp 192.168.2.0 0.0.0.255 host 192.168.1.10 eq 20",
+          "code": "Router(config)# ip nat inside source static tcp 10.10.10.253 20 13.13.13.2 20\nRouter(config)# ip nat inside source static tcp 10.10.10.253 21 13.13.13.2 21",
           "link": null
         }
       ]
