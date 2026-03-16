@@ -56,12 +56,44 @@
       ],
       "DNS": [
         {
-          "title": "DNS",
-          "text": "DNS",
+          "title": "1. Netwerk verstehen und IPs ermitteln",
+          "text": "Klären: unter welcher IP ist der Webserver von extern zu erreichen?",
           "image": null,
           "image_caption": null,
           "code": null,
           "link": null
+        },
+        {
+          "title": "2. Dem Hosts die local DNS Adresse mitteilen",
+          "text": "",
+          "image": null,
+          "image_caption": null,
+          "code": "Config -> Settings",
+          "link": null
+        },
+        {
+          "title": "3. Local und public DNS konfigurieren",
+          "text": null,
+          "image": null,
+          "image_caption": null,
+          "code": "Services -> DNS",
+          "link": null
+        },
+        {
+          "title": "4. DNS-Einstellungen",
+          "text": "Der local DNS benötigt:\n1. NS-Record\n2. A-Record\n\nDer public DNS benötigt einen A-Record.",
+          "image": null,
+          "image_caption": null,
+          "code": null,
+          "link": null
+        },
+        {
+          "title": "5. Lösung: local DNS:",
+          "text": null,
+          "image": null,
+          "image_caption": null,
+          "code": null,
+          "link": "/img/localdns-final.png"
         }
       ]
     }
