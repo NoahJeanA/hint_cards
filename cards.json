@@ -54,6 +54,15 @@
           "link": null
         }
       ]
+      "DNS": [
+        {
+          "title": "Was ist FTP?",
+          "text": "FTP (File Transfer Protocol) ist ein Netzwerkprotokoll zur Übertragung von Dateien zwischen einem Client und einem Server.\n\nWichtigste Eigenschaften:\n– Anwendungsschicht (OSI-Schicht 7)\n– Nutzt TCP als Transportprotokoll\n– Zwei getrennte Verbindungen:\n   Steuerkanal (Port 21) und Datenkanal (Port 20 oder dynamisch)\n– Klartextübertragung – kein Schutz vor Mitlesen\n   (Sichere Alternative: SFTP oder FTPS)",
+          "image": null,
+          "image_caption": null,
+          "code": "Client  ──Port 21──►  Server   (Steuerkanal: Befehle)\nClient  ◄─Port 20──   Server   (Datenkanal:  Dateien)",
+          "link": "https://www.elektronik-kompendium.de/sites/net/0902241.htm"
+        },
     }
   },
 
