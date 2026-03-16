@@ -65,7 +65,7 @@
         },
         {
           "title": "2. Dem Hosts die local DNS Adresse mitteilen",
-          "text": "",
+          "text": null,
           "image": null,
           "image_caption": null,
           "code": "Config -> Settings",
@@ -90,10 +90,10 @@
         {
           "title": "5. Lösung: local DNS:",
           "text": null,
-          "image": null,
-          "image_caption": null,
+          "image": "/img/localdns-final.png"
+          "image_caption": "Lösung local DNS"
           "code": null,
-          "link": "/img/localdns-final.png"
+          "link": null
         }
       ]
     }
