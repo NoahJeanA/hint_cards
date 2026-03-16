@@ -90,8 +90,8 @@
         {
           "title": "5. Lösung: local DNS",
           "text": "",
-          "image": "img/localdns-final.png"
-          "image_caption": "Lösung local DNS"
+          "image": "img/localdns-final.png",
+          "image_caption": "Lösung local DNS",
           "code": null,
           "link": null
         }
