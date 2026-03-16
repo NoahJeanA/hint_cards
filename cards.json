@@ -39,7 +39,7 @@
         },
         {
           "title": "Zugriff aus anderem Netz – Routing prüfen",
-          "text": "Soll ein Client aus einem anderen Netz auf den FTP-Server zugreifen, muss zuerst das Routing stimmen:\n\n1. Erreichbarkeit mit ping testen\n\nErst wenn ping funktioniert → weiter mit der ACL-Konfiguration.",
+          "text": "Soll ein Client aus einem anderen Netz auf den FTP-Server zugreifen, muss zuerst das Routing stimmen:\n\n1. Prüfen ob das Default Gateway korrekt gesetzt ist.\n2. Erreichbarkeit mit ping testen\n\nErst wenn ping funktioniert → weiter mit der ACL-Konfiguration.",
           "image": null,
           "image_caption": null,
           "code": "ping 13.13.13.2",
