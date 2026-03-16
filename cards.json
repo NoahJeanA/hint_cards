@@ -64,16 +64,16 @@
           "link": null
         },
         {
-          "title": "2. Dem Hosts die local DNS Adresse mitteilen",
-          "text": null,
+          "title": "2. Dem Host die local DNS Adresse mitteilen",
+          "text": "",
           "image": null,
           "image_caption": null,
           "code": "Config -> Settings",
           "link": null
         },
         {
-          "title": "3. Local und public DNS konfigurieren",
-          "text": null,
+          "title": "3. Local und public DNS aktivieren und konfigurieren",
+          "text": "",
           "image": null,
           "image_caption": null,
           "code": "Services -> DNS",
@@ -88,9 +88,9 @@
           "link": null
         },
         {
-          "title": "5. Lösung: local DNS:",
-          "text": null,
-          "image": "/img/localdns-final.png"
+          "title": "5. Lösung: local DNS",
+          "text": "",
+          "image": "img/localdns-final.png"
           "image_caption": "Lösung local DNS"
           "code": null,
           "link": null
