@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hint Cards – Berufskolleg Lübbecke</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='36' fill='none' stroke='%23e600a0' stroke-width='9' stroke-dasharray='56.55 169.64' stroke-linecap='round' transform='rotate(-90 50 50)'/%3E%3Ccircle cx='50' cy='50' r='36' fill='none' stroke='%233d3d3d' stroke-width='9' stroke-dasharray='162.76 63.43' stroke-dashoffset='-63.43' stroke-linecap='round' transform='rotate(-90 50 50)'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -244,15 +243,44 @@
     .finished .check { font-size: 30px; margin-bottom: 0.5rem; }
     .finished strong { display: block; font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; }
 
-    /* ── Footer ── */
+    /* ── Footer / License ── */
     .footer {
-      text-align: center;
-      padding: 0.6rem 1rem;
+      border-top: 1px solid var(--border);
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      background: var(--bg2);
+    }
+    .footer-license {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       font-size: 11px;
       color: var(--text3);
-      border-top: 1px solid var(--border);
-      letter-spacing: 0.04em;
     }
+    .cc-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: var(--border);
+      border-radius: 4px;
+      padding: 2px 5px;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text2);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .cc-badge:hover { background: var(--mg-light); color: var(--mg); }
+    .cc-badge svg { width: 13px; height: 13px; fill: currentColor; flex-shrink: 0; }
+    .footer-author { font-size: 11px; color: var(--text3); text-align: right; }
+    .footer-author a { color: var(--text3); text-decoration: none; }
+    .footer-author a:hover { color: var(--mg); }
   </style>
 </head>
 <body>
@@ -260,7 +288,7 @@
 
   <!-- Header -->
   <div class="header">
-    <div class="header-title">HINT<span style="color:var(--mg)">_</span>CARDS: Gestuftes Hilfesystem</div>
+    <div class="header-title">HINT CARDS: Gestuftes Hilfesystem</div>
     <div class="logo">
       <div class="logo-name">BERUFSKOLLEG</div>
       <div class="logo-city">Lübbecke</div>
@@ -284,11 +312,28 @@
     </div>
   </div>
 
-  <div class="footer">© <span id="footerYear"></span> Bg</div>
+  <!-- Footer / License -->
+  <div class="footer">
+    <div class="footer-license">
+      <a class="cc-badge" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" title="Creative Commons BY-NC-SA 4.0">
+        <!-- CC icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.98 0C5.366 0 0 5.373 0 12s5.366 12 11.98 12C18.634 24 24 18.627 24 12S18.634 0 11.98 0zm.02 2.182c5.423 0 9.818 4.395 9.818 9.818S17.423 21.818 12 21.818 2.182 17.423 2.182 12 6.577 2.182 12 2.182zm-.39 4.91c-1.517 0-2.71.48-3.578 1.44C7.163 9.49 6.73 10.668 6.73 12.09c0 1.393.433 2.543 1.302 3.45.868.908 2.05 1.362 3.545 1.362 1.33 0 2.45-.403 3.356-1.21l-1.282-1.41c-.566.524-1.22.786-1.963.786-.795 0-1.427-.254-1.896-.763-.469-.51-.703-1.183-.703-2.02 0-.85.234-1.533.703-2.048.469-.516 1.1-.773 1.896-.773.743 0 1.397.254 1.963.763l1.282-1.42c-.906-.806-2.025-1.21-3.357-1.21zm5.673 0c-1.517 0-2.71.48-3.578 1.44-.869.948-1.303 2.126-1.303 3.548 0 1.393.434 2.543 1.303 3.45.868.908 2.05 1.362 3.545 1.362 1.33 0 2.45-.403 3.356-1.21l-1.282-1.41c-.566.524-1.22.786-1.963.786-.795 0-1.427-.254-1.896-.763-.469-.51-.703-1.183-.703-2.02 0-.85.234-1.533.703-2.048.469-.516 1.1-.773 1.896-.773.743 0 1.397.254 1.963.763l1.282-1.42c-.906-.806-2.025-1.21-3.357-1.21z"/></svg>
+        CC BY-NC-SA 4.0
+      </a>
+    </div>
+    <div class="footer-author" id="footerAuthor">
+      Bg - Berufskolleg Lübbecke
+    </div>
+  </div>
 
 </div>
 
 <script>
+  // ── Version (hier zentral ändern) ────────────────────────────────────────
+  const VERSION = 'v0.1.0-alpha';
+  document.getElementById('footerAuthor').innerHTML =
+    `Bg &nbsp;<span style="opacity:0.5;font-size:10px;">${VERSION}</span>`;
+
   // ── Load cards from cards.json ──────────────────────────────────────────
   let DATA = {};
   let curLF  = null;
@@ -450,8 +495,6 @@
   function escAttr(str) {
     return String(str).replace(/"/g, '&quot;');
   }
-
-  document.getElementById('footerYear').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
