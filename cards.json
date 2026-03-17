@@ -60,7 +60,7 @@
           "text": "Klären: Unter welcher IP ist der Webserver von extern zu erreichen?\n\nMit ping Verbindungen überprüfen",
           "image": null,
           "image_caption": null,
-          "code": "ping <ip>
+          "code": "ping <ip>",
           "link": null
         },
         {
