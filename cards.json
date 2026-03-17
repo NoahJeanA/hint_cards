@@ -14,7 +14,7 @@
     "topics": {
       "FTP": [
         {
-          "title": "1. Was ist FTP?",
+          "title": "Was ist FTP?",
           "text": "FTP (File Transfer Protocol) ist ein Netzwerkprotokoll zur Übertragung von Dateien zwischen einem Client und einem Server.\n\nWichtigste Eigenschaften:\n– Anwendungsschicht (OSI-Schicht 7)\n– Nutzt TCP als Transportprotokoll\n– Zwei getrennte Verbindungen:\n   Steuerkanal (Port 21) und Datenkanal (Port 20 oder dynamisch)\n– Klartextübertragung – kein Schutz vor Mitlesen\n   (Sichere Alternative: SFTP oder FTPS)",
           "image": null,
           "image_caption": null,
@@ -22,7 +22,7 @@
           "link": "https://www.elektronik-kompendium.de/sites/net/0902241.htm"
         },
         {
-          "title": "2. FTP-Server in Packet Tracer einrichten",
+          "title": "FTP-Server in Packet Tracer einrichten",
           "text": "Einen FTP-Server in Cisco Packet Tracer aktivieren und konfigurieren:\n\n1. Server-Gerät anklicken → Reiter 'Services'\n2. Dienst 'FTP' auswählen → ON aktivieren\n3. Benutzer anlegen: Username, Password, Berechtigungen\n4. IP-Adresse des Servers notieren\n\nTest vom Client im gleichen Netz → Command Prompt → ftp <IP>",
           "image": null,
           "image_caption": null,
@@ -30,7 +30,7 @@
           "link": null
         },
         {
-          "title": "3. FTP-Befehle im Command Prompt",
+          "title": "FTP-Befehle im Command Prompt",
           "text": "FTP-Verbindung von einem PC herstellen und Dateien übertragen:\n\n1. PC anklicken → Desktop → Command Prompt\n2. Verbindung aufbauen mit: ftp <IP-Adresse>\n3. Login mit Username und Password\n4. Befehle eingeben",
           "image": null,
           "image_caption": null,
@@ -38,7 +38,7 @@
           "link": null
         },
         {
-          "title": "4. Zugriff aus anderem Netz – Routing prüfen",
+          "title": "Zugriff aus anderem Netz – Routing prüfen",
           "text": "Soll ein Client aus einem anderen Netz auf den FTP-Server zugreifen, muss zuerst das Routing stimmen:\n\n1. Prüfen ob das Default Gateway korrekt gesetzt ist.\n2. Erreichbarkeit mit ping testen\n\nErst wenn ping funktioniert → weiter mit der ACL-Konfiguration.",
           "image": null,
           "image_caption": null,
@@ -46,7 +46,7 @@
           "link": null
         },
         {
-          "title": "5. ACL: FTP-Zugriff aus anderem Netz erlauben",
+          "title": "ACL: FTP-Zugriff aus anderem Netz erlauben",
           "text": "Eine ACL erlaubt gezielt FTP-Verkehr (TCP Port 20 + 21) zum FTP-Server. Alle anderen Verbindungen bleiben gesperrt.\n\nDie ACL wird am Router konfiguriert",
           "image": null,
           "image_caption": null,
@@ -56,7 +56,7 @@
       ],
       "DNS": [
         {
-          "title": "1. Netwerk verstehen und IPs ermitteln",
+          "title": "Netwerk verstehen und IPs ermitteln",
           "text": "Klären: unter welcher IP ist der Webserver von extern zu erreichen?",
           "image": null,
           "image_caption": null,
@@ -72,7 +72,7 @@
           "link": null
         },
         {
-          "title": "3. Local und public DNS aktivieren und konfigurieren",
+          "title": "Local und public DNS aktivieren und konfigurieren",
           "text": "",
           "image": null,
           "image_caption": null,
@@ -80,7 +80,7 @@
           "link": null
         },
         {
-          "title": "4. DNS-Einstellungen",
+          "title": "DNS-Einstellungen",
           "text": "Der local DNS benötigt:\n1. NS-Record\n2. A-Record\n\nDer public DNS benötigt einen A-Record.",
           "image": null,
           "image_caption": null,
@@ -88,7 +88,7 @@
           "link": null
         },
         {
-          "title": "5. Lösung: local DNS",
+          "title": "Lösung: local DNS",
           "text": "",
           "image": "img/localdns-final.png",
           "image_caption": "Lösung local DNS",
@@ -96,7 +96,7 @@
           "link": null
         },
         {
-          "title": "6. Lösung: public DNS",
+          "title": "Lösung: public DNS",
           "text": "",
           "image": "img/publicdns-final.png",
           "image_caption": "Lösung public DNS",
