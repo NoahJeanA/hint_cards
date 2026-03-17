@@ -56,11 +56,11 @@
       ],
       "DNS": [
         {
-          "title": "Netwerk verstehen und IPs ermitteln",
-          "text": "Klären: unter welcher IP ist der Webserver von extern zu erreichen?",
+          "title": "Netzwerk verstehen und IPs ermitteln",
+          "text": "Klären: Unter welcher IP ist der Webserver von extern zu erreichen?\n\nMit ping Verbindungen überprüfen",
           "image": null,
           "image_caption": null,
-          "code": null,
+          "code": "ping <ip>
           "link": null
         },
         {
@@ -100,6 +100,16 @@
           "text": "",
           "image": "img/publicdns-final.png",
           "image_caption": "Lösung public DNS",
+          "code": null,
+          "link": null
+        }
+      ],
+      "E-Mail": [
+        {
+          "title": "Netwerk verstehen und IPs ermitteln",
+          "text": "Klären: unter welcher IP ist der Webserver von extern zu erreichen?",
+          "image": null,
+          "image_caption": null,
           "code": null,
           "link": null
         }
