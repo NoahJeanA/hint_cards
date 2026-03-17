@@ -81,7 +81,7 @@
         },
         {
           "title": "DNS-Einstellungen",
-          "text": "Der local DNS benötigt:\n1. NS-Record\n2. A-Record\n\nDer public DNS benötigt einen A-Record.",
+          "text": "Der local DNS benötigt:\n1. NS-Record\n2. A-Record\n\nDer public DNS benötigt einen A-Record.\n\nHinweis: Die nächsten Karten enthalten die Lösungen.",
           "image": null,
           "image_caption": null,
           "code": null,
