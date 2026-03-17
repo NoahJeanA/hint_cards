@@ -57,7 +57,7 @@
       "DNS": [
         {
           "title": "Netzwerk verstehen und IPs ermitteln",
-          "text": "Klären: Unter welcher IP ist der Webserver von extern zu erreichen?\n\nMit ping Verbindungen überprüfen",
+          "text": "Klären: Unter welcher IP ist der Webserver von extern zu erreichen?\n\nMit ping Verbindungen überprüfen\n\nDie Edge Router nutzen NAT, um mehrere Geräte in einem Netzwerk über eine einzige öffentliche IP-Adresse mit dem Internet zu verbinden.",
           "image": null,
           "image_caption": null,
           "code": "ping <ip>",
