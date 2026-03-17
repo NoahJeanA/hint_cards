@@ -106,12 +106,20 @@
       ],
       "E-Mail": [
         {
-          "title": "Allgemeine Informationen",
-          "text": "",
-          "image": null,
-          "image_caption": null,
-          "code": null,
-          "link": null
+    "title": "Allgemeine Informationen",
+    "text": "Ein E-Mail-Server ermöglicht das Senden, Empfangen und Speichern von E-Mails.\nEr arbeitet nach dem Client-Server-Prinzip: Ein E-Mail-Client (z. B. Outlook oder Thunderbird) kommuniziert mit dem Server, um Nachrichten zu übertragen oder abzurufen.\nE-Mail-Server bestehen oft aus mehreren Komponenten wie SMTP-Servern für den Versand und IMAP- oder POP3-Servern für den Empfang.",
+    "image": null,
+    "image_caption": null,
+    "code": null,
+    "link": "https://de.wikipedia.org/wiki/E-Mail"
+        },
+        {
+    "title": "Relevante Protokolle mit Ports",
+    "text": "Für die E-Mail-Kommunikation werden verschiedene Protokolle verwendet:\nSMTP (Simple Mail Transfer Protocol) für den Versand von E-Mails (Ports: 25, 587, 465)\nPOP3 (Post Office Protocol Version 3) zum Abrufen von E-Mails (Ports: 110, 995)\nIMAP (Internet Message Access Protocol) für den Zugriff auf E-Mails direkt auf dem Server (Ports: 143, 993)\nVerschlüsselte Verbindungen nutzen meist SSL/TLS.",
+    "image": null,
+    "image_caption": null,
+    "code": null,
+    "link": null
         }
       ]
     }
