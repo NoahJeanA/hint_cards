@@ -47,7 +47,7 @@
         },
         {
           "title": "NAT: FTP-Zugriff aus anderem Netz erlauben",
-          "text": "Gezielt FTP-Verkehr (TCP Port 20 + 21) zum FTP-Server erlauben. Alle anderen Verbindungen bleiben gesperrt.\n\nDies wird am Router konfiguriert",
+          "text": "Gezielt FTP-Verkehr (TCP Port 20 + 21) zum FTP-Server erlauben. Alle anderen Verbindungen bleiben gesperrt.\n\nDies wird am Router konfiguriert.",
           "image": null,
           "image_caption": null,
           "code": "Router(config)# ip nat inside source static tcp 10.10.10.253 20 13.13.13.2 20\nRouter(config)# ip nat inside source static tcp 10.10.10.253 21 13.13.13.2 21",
