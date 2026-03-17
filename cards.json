@@ -106,8 +106,8 @@
       ],
       "E-Mail": [
         {
-          "title": "Netwerk verstehen und IPs ermitteln",
-          "text": "Klären: unter welcher IP ist der Webserver von extern zu erreichen?",
+          "title": "Allgemeine Informationen",
+          "text": "",
           "image": null,
           "image_caption": null,
           "code": null,
